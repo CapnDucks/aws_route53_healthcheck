@@ -9,6 +9,7 @@ resource "aws_route53_health_check" "this" {
   resource_path     = var.resource_path
   failure_threshold = var.failure_threshold
   request_interval  = var.request_interval
+  measure_latency   = var.measure_latency
 
   tags = merge(
     {

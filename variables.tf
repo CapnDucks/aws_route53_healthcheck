@@ -123,3 +123,9 @@ variable "tags" {
   description = "Tags for the resource"
   type        = map(any)
 }
+
+variable "measure_latency" {
+  default     = true
+  description = "Measure the latency of requests"
+  type        = bool
+}
