@@ -10,8 +10,9 @@ resource "aws_route53_health_check" "this" {
   failure_threshold = var.failure_threshold
   request_interval  = var.request_interval
 
-  tags = {
-    Name   = "${var.name}-${terraform.workspace}"
-    module = "aws_route53_healthcheck"
-  }
+  tags = merge(
+    {
+      Name   = "${var.name}-${terraform.workspace}"
+      module = "aws_route53_healthcheck"
+  })
 }

@@ -117,3 +117,9 @@ variable "email_endpoints" {
   description = "Email endpoints for SNS subscription"
   type        = any
 }
+
+variable "tags" {
+  default     = {}
+  description = "Tags for the resource"
+  type        = map(any)
+}
