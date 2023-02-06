@@ -52,7 +52,7 @@ variable "type" {
 }
 
 variable "resource_path" {
-  default     = "/"
+  default     = ""
   description = "The path that you want to request when performing health checks."
 }
 
